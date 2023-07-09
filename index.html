@@ -1,58 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="weatherForecast">
-    <h1 id="Paragraph1"> 5 DAYS WEATHER FORECAST</h1>
-    <p id="imputContainer">City: <input type="text" id="cityInput"></p>
-    <button onclick="GetInfo()">Click Me</button>
-    <h2 id="cityName">--London--</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="./assets/style.css" />
+    <!-- Day.js -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"
+    ></script>
+    <!-- JavaScript -->
+    <script defer src="./js/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Weather Dashboard</h1>
+    </header>
+    <main>
+      <aside>
+        <form id="search-form">
+          <label for="search">Search for a City:</label>
+          <input id="search-input" type="text" name="search" />
+          <button type="submit">Search</button>
+        </form>
+        <hr />
+        <div class="city-list"></div>
+      </aside>
+      <section>
+        <div class="city hidden">
+          <h2>
+            <span id="city-name"></span> <span id="city-date"></span>
+            <span id="city-emoji"></span>
+          </h2>
+          <p>Temp: <span id="temp-current"></span></p>
+          <p>Wind: <span id="wind-current"></span></p>
+          <p>Humidity: <span id="humidity-current"></span></p>
         </div>
-        
-    <div id="weatherContainer">
-        <div id="iconsContainer">
-        <div class="icons">
-            <p class="weather" id="day1"></p>
-            <div class="image"><img src="dots.png" class="imgClass" id="img1"alt=""></div>
-            <p class="minValues" id="day1Min">Loading...</p>
-            <p class="maxValues" id="day1Max">Loading...</p>
+        <div class="forecast hidden">
+          <h3>5-Day Forecast:</h3>
+          <div class="cards"></div>
         </div>
-        <div class="icons">
-            <p class="weather" id="day2"></p>
-            <div class="image"><img src="dots.png" class="imgClass" id="img2"alt=""></div>
-            <p class="minValues" id="day2Min">Loading ...</p>
-            <p class="maxValues" id="day2Max">Loading ...</p>
-        </div>
-        <div class="icons">
-            <p class="weather" id="day3"></p>
-            <div class="image"><img src="dots.png" class="imgClass" id="img3"alt=""></div>
-            <p class="minValues" id="day3Min">Loading ...</p>
-            <p class="maxValues" id="day3Max">Loading ...</p>
-        </div>
-        <div class="icons">
-            <p class="weather" id="day4"></p>
-            <div class="image"><img src="dots.png" class="imgClass" id="img4"alt=""></div>
-            <p class="minValues" id="day4Min">Loading ...</p>
-            <p class="maxValues" id="day4Max">Loading ...</p>
-        </div>
-        <div class="icons">
-            <p class="weather" id="day5"></p>
-            <div class="image"><img src="dots.png" class="imgClass" id="img5"alt=""></div>
-            <p class="minValues" id="day5Min">Loading ...</p>
-            <p class="maxValues" id="day5Max">Loading ...</p>
-        </div>
-        </div>
-    </div>
-    </div>
-
-    <script src="js/script.js"></script> 
-</body>
+      </section>
+    </main>
+  </body>
 </html>
-
