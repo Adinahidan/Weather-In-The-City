@@ -26,7 +26,7 @@ function handleSearchFormSubmit(event) {
   cardsContainerEl.innerHTML = "";
 
   const citySearched = searchInputEl.value.trim();
-  const apiKey = "f4340e47ea2c893cd45e033c791f26e0";
+  const apiKey = "";
 
   if (citySearched) {
     const apiWeatherUrl =
